@@ -20,12 +20,14 @@ declare global {
         container: HTMLElement,
         options: {
           sitekey: string;
+          size?: "invisible";
           callback: (token: string) => void;
           "expired-callback"?: () => void;
           "error-callback"?: () => void;
         },
       ) => string;
       reset: (widgetId: string) => void;
+      execute: (widgetId: string) => void;
     };
   }
 }
@@ -71,6 +73,7 @@ export function ContactSection({
   const turnstileRef = useRef<HTMLDivElement | null>(null);
   const turnstileWidgetId = useRef<string | null>(null);
   const [turnstileToken, setTurnstileToken] = useState("");
+  const [pendingSubmit, setPendingSubmit] = useState(false);
 
   const formatRut = (value: string) => {
     const cleaned = value.replace(/[^0-9kK]/g, "").toUpperCase();
@@ -144,22 +147,7 @@ export function ContactSection({
     "Otros",
   ];
 
-  const handleSubmit = (e: FormEvent) => {
-    e.preventDefault();
-    if (isSubmitting) return;
-    setSubmitMessage(null);
-    if (!isValidRut(formData.rut)) {
-      setSubmitMessage("Por favor ingresa un RUT válido.");
-      return;
-    }
-    if (!formData.telefono || formData.telefono.length < 8) {
-      setSubmitMessage("Por favor ingresa un teléfono válido.");
-      return;
-    }
-    if (!turnstileToken) {
-      setSubmitMessage("Por favor completa el captcha antes de enviar.");
-      return;
-    }
+  const submitForm = () => {
     setIsSubmitting(true);
 
     const payload = new URLSearchParams();
@@ -215,11 +203,36 @@ export function ContactSection({
       })
       .finally(() => {
         setIsSubmitting(false);
+        setPendingSubmit(false);
         setTurnstileToken("");
         if (window.turnstile && turnstileWidgetId.current) {
           window.turnstile.reset(turnstileWidgetId.current);
         }
       });
+  };
+
+  const handleSubmit = (e: FormEvent) => {
+    e.preventDefault();
+    if (isSubmitting) return;
+    setSubmitMessage(null);
+    if (!isValidRut(formData.rut)) {
+      setSubmitMessage("Por favor ingresa un RUT válido.");
+      return;
+    }
+    if (!formData.telefono || formData.telefono.length < 8) {
+      setSubmitMessage("Por favor ingresa un teléfono válido.");
+      return;
+    }
+    if (!turnstileToken) {
+      setPendingSubmit(true);
+      if (window.turnstile && turnstileWidgetId.current) {
+        window.turnstile.execute(turnstileWidgetId.current);
+        return;
+      }
+      setSubmitMessage("Captcha aún no está listo. Intenta nuevamente.");
+      return;
+    }
+    submitForm();
   };
 
   const handleInputChange = (field: string, value: string) => {
@@ -261,6 +274,7 @@ export function ContactSection({
         turnstileRef.current,
         {
           sitekey: "0x4AAAAAACZVXJynMwwtsllP",
+          size: "invisible",
           callback: (token: string) => {
             setTurnstileToken(token);
           },
@@ -295,6 +309,11 @@ export function ContactSection({
       existingScript.addEventListener("load", renderWidget);
     }
   }, []);
+
+  useEffect(() => {
+    if (!pendingSubmit || !turnstileToken || isSubmitting) return;
+    submitForm();
+  }, [pendingSubmit, turnstileToken, isSubmitting]);
 
   return (
     <section id="contacto" className="py-16 lg:py-24 bg-brand-cream">
