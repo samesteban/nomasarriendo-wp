@@ -1,0 +1,119 @@
+{
+  "key": "group_site_options",
+  "title": "Site Options",
+  "fields": [
+    {
+      "key": "field_site_logo",
+      "label": "Logo del sitio",
+      "name": "site_logo",
+      "type": "image",
+      "return_format": "url"
+    },
+    {
+      "key": "field_site_name",
+      "label": "Nombre del sitio",
+      "name": "site_name",
+      "type": "text"
+    },
+    {
+      "key": "field_header_cta_label",
+      "label": "Etiqueta CTA del header",
+      "name": "header_cta_label",
+      "type": "text"
+    },
+    {
+      "key": "field_header_cta_target",
+      "label": "Destino CTA del header",
+      "name": "header_cta_target",
+      "type": "text"
+    },
+    {
+      "key": "field_footer_description",
+      "label": "Descripción del footer",
+      "name": "footer_description",
+      "type": "textarea"
+    },
+    {
+      "key": "field_footer_email",
+      "label": "Correo del footer",
+      "name": "footer_email",
+      "type": "email"
+    },
+    {
+      "key": "field_footer_phone",
+      "label": "Teléfono del footer",
+      "name": "footer_phone",
+      "type": "text"
+    },
+    {
+      "key": "field_footer_notice",
+      "label": "Aviso legal del footer",
+      "name": "footer_notice",
+      "type": "textarea"
+    },
+    {
+      "key": "field_footer_legal_links",
+      "label": "Enlaces legales del footer",
+      "name": "footer_legal_links",
+      "type": "repeater",
+      "sub_fields": [
+        {
+          "key": "field_footer_legal_link_label",
+          "label": "Etiqueta",
+          "name": "label",
+          "type": "text"
+        },
+        {
+          "key": "field_footer_legal_link_url",
+          "label": "URL",
+          "name": "url",
+          "type": "url"
+        }
+      ]
+    },
+    {
+      "key": "field_social_links",
+      "label": "Redes sociales",
+      "name": "social_links",
+      "type": "repeater",
+      "sub_fields": [
+        {
+          "key": "field_social_label",
+          "label": "Etiqueta",
+          "name": "label",
+          "type": "text"
+        },
+        {
+          "key": "field_social_url",
+          "label": "URL",
+          "name": "url",
+          "type": "url"
+        },
+        {
+          "key": "field_social_icon",
+          "label": "Icono",
+          "name": "icon",
+          "type": "text"
+        }
+      ]
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "options_page",
+        "operator": "==",
+        "value": "site-options"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 1
+}

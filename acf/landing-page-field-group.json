@@ -1,0 +1,654 @@
+{
+  "key": "group_landing_page",
+  "title": "Landing Page",
+  "fields": [
+    {
+      "key": "field_modules",
+      "label": "Módulos",
+      "name": "modules",
+      "type": "flexible_content",
+      "layouts": {
+        "layout_hero": {
+          "key": "layout_hero",
+          "name": "hero",
+          "label": "Portada",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_hero_title",
+              "label": "Título",
+              "name": "title",
+              "type": "text"
+            },
+            {
+              "key": "field_hero_subtitle",
+              "label": "Subtítulo",
+              "name": "subtitle",
+              "type": "textarea"
+            },
+            {
+              "key": "field_hero_cta_primary_label",
+              "label": "Etiqueta CTA principal",
+              "name": "cta_primary_label",
+              "type": "text"
+            },
+            {
+              "key": "field_hero_cta_primary_target",
+              "label": "Destino CTA principal",
+              "name": "cta_primary_target",
+              "type": "text"
+            },
+            {
+              "key": "field_hero_cta_secondary_label",
+              "label": "Etiqueta CTA secundaria",
+              "name": "cta_secondary_label",
+              "type": "text"
+            },
+            {
+              "key": "field_hero_cta_secondary_target",
+              "label": "Destino CTA secundaria",
+              "name": "cta_secondary_target",
+              "type": "text"
+            },
+            {
+              "key": "field_hero_background_video_url",
+              "label": "URL de video de fondo",
+              "name": "background_video_url",
+              "type": "url"
+            },
+            {
+              "key": "field_hero_background_image_url",
+              "label": "URL de imagen de fondo",
+              "name": "background_image_url",
+              "type": "url"
+            }
+          ]
+        },
+        "layout_stats": {
+          "key": "layout_stats",
+          "name": "stats",
+          "label": "Estadísticas",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_stats_items",
+              "label": "Elementos",
+              "name": "items",
+              "type": "repeater",
+              "sub_fields": [
+                {
+                  "key": "field_stats_item_number",
+                  "label": "Número",
+                  "name": "number",
+                  "type": "text"
+                },
+                {
+                  "key": "field_stats_item_label",
+                  "label": "Etiqueta",
+                  "name": "label",
+                  "type": "text"
+                },
+                {
+                  "key": "field_stats_item_description",
+                  "label": "Descripción",
+                  "name": "description",
+                  "type": "textarea"
+                },
+                {
+                  "key": "field_stats_item_icon",
+                  "label": "Icono",
+                  "name": "icon",
+                  "type": "text"
+                }
+              ]
+            }
+          ]
+        },
+        "layout_success_story": {
+          "key": "layout_success_story",
+          "name": "success_story",
+          "label": "Caso de éxito",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_success_title",
+              "label": "Título",
+              "name": "title",
+              "type": "text"
+            },
+            {
+              "key": "field_success_subtitle",
+              "label": "Subtítulo",
+              "name": "subtitle",
+              "type": "textarea"
+            },
+            {
+              "key": "field_success_image",
+              "label": "Imagen",
+              "name": "image",
+              "type": "image",
+              "return_format": "url"
+            },
+            {
+              "key": "field_success_quote",
+              "label": "Cita",
+              "name": "quote",
+              "type": "textarea"
+            },
+            {
+              "key": "field_success_author_name",
+              "label": "Nombre del autor",
+              "name": "author_name",
+              "type": "text"
+            },
+            {
+              "key": "field_success_author_meta",
+              "label": "Detalle del autor",
+              "name": "author_meta",
+              "type": "text"
+            },
+            {
+              "key": "field_success_results",
+              "label": "Resultados",
+              "name": "results",
+              "type": "repeater",
+              "sub_fields": [
+                {
+                  "key": "field_success_result_item",
+                  "label": "Resultado",
+                  "name": "result",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "key": "field_success_cta_label",
+              "label": "Etiqueta CTA",
+              "name": "cta_label",
+              "type": "text"
+            },
+            {
+              "key": "field_success_cta_target",
+              "label": "Destino CTA",
+              "name": "cta_target",
+              "type": "text"
+            }
+          ]
+        },
+        "layout_process": {
+          "key": "layout_process",
+          "name": "process",
+          "label": "Proceso",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_process_title",
+              "label": "Título",
+              "name": "title",
+              "type": "text"
+            },
+            {
+              "key": "field_process_subtitle",
+              "label": "Subtítulo",
+              "name": "subtitle",
+              "type": "textarea"
+            },
+            {
+              "key": "field_process_scroll_hint",
+              "label": "Texto de scroll",
+              "name": "scroll_hint",
+              "type": "text"
+            },
+            {
+              "key": "field_process_steps",
+              "label": "Pasos",
+              "name": "steps",
+              "type": "repeater",
+              "sub_fields": [
+                {
+                  "key": "field_process_step_title",
+                  "label": "Título",
+                  "name": "title",
+                  "type": "text"
+                },
+                {
+                  "key": "field_process_step_subtitle",
+                  "label": "Subtítulo",
+                  "name": "subtitle",
+                  "type": "text"
+                },
+                {
+                  "key": "field_process_step_description",
+                  "label": "Descripción",
+                  "name": "description",
+                  "type": "textarea"
+                },
+                {
+                  "key": "field_process_step_icon",
+                  "label": "Icono",
+                  "name": "icon",
+                  "type": "text"
+                },
+                {
+                  "key": "field_process_step_background",
+                  "label": "Fondo",
+                  "name": "background",
+                  "type": "image",
+                  "return_format": "url"
+                },
+                {
+                  "key": "field_process_step_features",
+                  "label": "Características",
+                  "name": "features",
+                  "type": "repeater",
+                  "sub_fields": [
+                    {
+                      "key": "field_process_step_feature_item",
+                      "label": "Característica",
+                      "name": "feature",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "field_process_cta_title",
+              "label": "Titulo CTA",
+              "name": "cta_title",
+              "type": "text"
+            },
+            {
+              "key": "field_process_cta_body",
+              "label": "Texto CTA",
+              "name": "cta_body",
+              "type": "textarea"
+            },
+            {
+              "key": "field_process_cta_primary_label",
+              "label": "Etiqueta CTA principal",
+              "name": "cta_primary_label",
+              "type": "text"
+            },
+            {
+              "key": "field_process_cta_primary_target",
+              "label": "Destino CTA principal",
+              "name": "cta_primary_target",
+              "type": "text"
+            },
+            {
+              "key": "field_process_cta_secondary_label",
+              "label": "Etiqueta CTA secundaria",
+              "name": "cta_secondary_label",
+              "type": "text"
+            },
+            {
+              "key": "field_process_cta_secondary_target",
+              "label": "Destino CTA secundaria",
+              "name": "cta_secondary_target",
+              "type": "text"
+            },
+            {
+              "key": "field_process_cta_stats",
+              "label": "Estadisticas CTA",
+              "name": "cta_stats",
+              "type": "repeater",
+              "sub_fields": [
+                {
+                  "key": "field_process_cta_stat_value",
+                  "label": "Valor",
+                  "name": "value",
+                  "type": "text"
+                },
+                {
+                  "key": "field_process_cta_stat_label",
+                  "label": "Texto",
+                  "name": "label",
+                  "type": "text"
+                }
+              ]
+            }
+          ]
+        },
+        "layout_why_trust": {
+          "key": "layout_why_trust",
+          "name": "why_trust",
+          "label": "Por qué confiar",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_why_trust_title",
+              "label": "Título",
+              "name": "title",
+              "type": "text"
+            },
+            {
+              "key": "field_why_trust_subtitle",
+              "label": "Subtítulo",
+              "name": "subtitle",
+              "type": "textarea"
+            },
+            {
+              "key": "field_why_trust_advantages",
+              "label": "Ventajas",
+              "name": "advantages",
+              "type": "repeater",
+              "sub_fields": [
+                {
+                  "key": "field_why_trust_advantage_title",
+                  "label": "Título",
+                  "name": "title",
+                  "type": "text"
+                },
+                {
+                  "key": "field_why_trust_advantage_description",
+                  "label": "Descripción",
+                  "name": "description",
+                  "type": "textarea"
+                },
+                {
+                  "key": "field_why_trust_advantage_icon",
+                  "label": "Icono",
+                  "name": "icon",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "key": "field_why_trust_guarantees_title",
+              "label": "Título de garantías",
+              "name": "guarantees_title",
+              "type": "text"
+            },
+            {
+              "key": "field_why_trust_guarantees",
+              "label": "Garantías",
+              "name": "guarantees",
+              "type": "repeater",
+              "sub_fields": [
+                {
+                  "key": "field_why_trust_guarantee_item",
+                  "label": "Garantía",
+                  "name": "guarantee",
+                  "type": "text"
+                }
+              ]
+            },
+            {
+              "key": "field_why_trust_story_title",
+              "label": "Historia título",
+              "name": "story_title",
+              "type": "text"
+            },
+            {
+              "key": "field_why_trust_story_body",
+              "label": "Historia texto",
+              "name": "story_body",
+              "type": "textarea"
+            },
+            {
+              "key": "field_why_trust_team_image",
+              "label": "Imagen del equipo",
+              "name": "team_image",
+              "type": "image",
+              "return_format": "url"
+            },
+            {
+              "key": "field_why_trust_team_title",
+              "label": "Título del equipo",
+              "name": "team_title",
+              "type": "text"
+            },
+            {
+              "key": "field_why_trust_team_text",
+              "label": "Texto del equipo",
+              "name": "team_text",
+              "type": "text"
+            },
+            {
+              "key": "field_why_trust_cta_label",
+              "label": "Etiqueta CTA",
+              "name": "cta_label",
+              "type": "text"
+            },
+            {
+              "key": "field_why_trust_cta_target",
+              "label": "Destino CTA",
+              "name": "cta_target",
+              "type": "text"
+            }
+          ]
+        },
+        "layout_what_we_look_for": {
+          "key": "layout_what_we_look_for",
+          "name": "what_we_look_for",
+          "label": "Qué buscamos en ti",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_what_we_look_for_title",
+              "label": "Título",
+              "name": "title",
+              "type": "text"
+            },
+            {
+              "key": "field_what_we_look_for_subtitle",
+              "label": "Subtítulo",
+              "name": "subtitle",
+              "type": "textarea"
+            },
+            {
+              "key": "field_what_we_look_for_requirements",
+              "label": "Requisitos",
+              "name": "requirements",
+              "type": "repeater",
+              "sub_fields": [
+                {
+                  "key": "field_what_we_look_for_requirement_title",
+                  "label": "Título",
+                  "name": "title",
+                  "type": "text"
+                },
+                {
+                  "key": "field_what_we_look_for_requirement_icon",
+                  "label": "Icono",
+                  "name": "icon",
+                  "type": "text"
+                },
+                {
+                  "key": "field_what_we_look_for_requirement_items",
+                  "label": "Elementos",
+                  "name": "items",
+                  "type": "repeater",
+                  "sub_fields": [
+                    {
+                      "key": "field_what_we_look_for_requirement_item",
+                      "label": "Elemento",
+                      "name": "item",
+                      "type": "text"
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "key": "field_what_we_look_for_notice_title",
+              "label": "Título del aviso",
+              "name": "notice_title",
+              "type": "text"
+            },
+            {
+              "key": "field_what_we_look_for_notice_left_title",
+              "label": "Aviso columna izquierda título",
+              "name": "notice_left_title",
+              "type": "text"
+            },
+            {
+              "key": "field_what_we_look_for_notice_left_body",
+              "label": "Aviso columna izquierda texto",
+              "name": "notice_left_body",
+              "type": "textarea"
+            },
+            {
+              "key": "field_what_we_look_for_notice_right_title",
+              "label": "Aviso columna derecha título",
+              "name": "notice_right_title",
+              "type": "text"
+            },
+            {
+              "key": "field_what_we_look_for_notice_right_body",
+              "label": "Aviso columna derecha texto",
+              "name": "notice_right_body",
+              "type": "textarea"
+            },
+            {
+              "key": "field_what_we_look_for_notice_summary",
+              "label": "Resumen del aviso",
+              "name": "notice_summary",
+              "type": "textarea"
+            },
+            {
+              "key": "field_what_we_look_for_cta_label",
+              "label": "Etiqueta CTA",
+              "name": "cta_label",
+              "type": "text"
+            },
+            {
+              "key": "field_what_we_look_for_cta_target",
+              "label": "Destino CTA",
+              "name": "cta_target",
+              "type": "text"
+            }
+          ]
+        },
+        "layout_contact": {
+          "key": "layout_contact",
+          "name": "contact",
+          "label": "Contacto",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_contact_title",
+              "label": "Título",
+              "name": "title",
+              "type": "text"
+            },
+            {
+              "key": "field_contact_subtitle",
+              "label": "Subtítulo",
+              "name": "subtitle",
+              "type": "textarea"
+            },
+            {
+              "key": "field_contact_whatsapp",
+              "label": "WhatsApp",
+              "name": "whatsapp",
+              "type": "text"
+            },
+            {
+              "key": "field_contact_email",
+              "label": "Correo electrónico",
+              "name": "email",
+              "type": "email"
+            },
+            {
+              "key": "field_contact_phone",
+              "label": "Teléfono",
+              "name": "phone",
+              "type": "text"
+            },
+            {
+              "key": "field_contact_hours",
+              "label": "Horarios",
+              "name": "hours",
+              "type": "textarea"
+            },
+            {
+              "key": "field_contact_privacy",
+              "label": "Nota de privacidad",
+              "name": "privacy_note",
+              "type": "textarea"
+            }
+          ]
+        },
+        "layout_faq": {
+          "key": "layout_faq",
+          "name": "faq",
+          "label": "Preguntas frecuentes",
+          "display": "block",
+          "sub_fields": [
+            {
+              "key": "field_faq_title",
+              "label": "Título",
+              "name": "title",
+              "type": "text"
+            },
+            {
+              "key": "field_faq_subtitle",
+              "label": "Subtítulo",
+              "name": "subtitle",
+              "type": "textarea"
+            },
+            {
+              "key": "field_faq_items",
+              "label": "Preguntas frecuentes",
+              "name": "faqs",
+              "type": "repeater",
+              "sub_fields": [
+                {
+                  "key": "field_faq_question",
+                  "label": "Pregunta",
+                  "name": "question",
+                  "type": "text"
+                },
+                {
+                  "key": "field_faq_answer",
+                  "label": "Respuesta",
+                  "name": "answer",
+                  "type": "textarea"
+                }
+              ]
+            },
+            {
+              "key": "field_faq_cta_label",
+              "label": "Etiqueta CTA",
+              "name": "cta_label",
+              "type": "text"
+            },
+            {
+              "key": "field_faq_cta_target",
+              "label": "Destino CTA",
+              "name": "cta_target",
+              "type": "text"
+            },
+            {
+              "key": "field_faq_whatsapp_url",
+              "label": "URL de WhatsApp",
+              "name": "whatsapp_url",
+              "type": "url"
+            }
+          ]
+        }
+      },
+      "button_label": "Add Module"
+    }
+  ],
+  "location": [
+    [
+      {
+        "param": "page_template",
+        "operator": "==",
+        "value": "landing-page.php"
+      }
+    ]
+  ],
+  "menu_order": 0,
+  "position": "normal",
+  "style": "default",
+  "label_placement": "top",
+  "instruction_placement": "label",
+  "hide_on_screen": "",
+  "active": true,
+  "description": "",
+  "show_in_rest": 1
+}
