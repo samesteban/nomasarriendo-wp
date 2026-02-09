@@ -150,7 +150,7 @@ export function ContactSection({
   const submitForm = () => {
     setIsSubmitting(true);
 
-    const payload = new URLSearchParams();
+    const payload = new FormData();
     payload.append("nombre", formData.nombre);
     payload.append("apellido", formData.apellido);
     payload.append("rut", formData.rut);
@@ -166,8 +166,8 @@ export function ContactSection({
       "https://wp.nomasarriendo.cl/wp-json/contact-form-7/v1/contact-forms/164/feedback",
       {
         method: "POST",
-        headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: payload.toString(),
+        headers: { Accept: "application/json" },
+        body: payload,
       },
     )
       .then(async (response) => {

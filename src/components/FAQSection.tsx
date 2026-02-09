@@ -16,7 +16,7 @@ type FAQSectionProps = {
   ctaLabel?: string;
   ctaTarget?: string;
   ctaLink?: unknown;
-  whatsappUrl?: string;
+  whatsappUrl?: unknown;
 };
 
 type LinkField = {
